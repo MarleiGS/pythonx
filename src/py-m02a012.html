@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M02A012: Condições Aninhadas</title>
+    <link rel="stylesheet" href="py-m00a000.css">
+
+    <style>
+        img {
+            width: 300px;
+            box-shadow: 2px 2px 4px black;
+            border-radius: 5px;
+        }
+
+        .ex1 {
+            border: 2px solid red;
+            padding: 0px 5px;
+        }
+
+        pre, code, mark {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python 3 |
+            <a href="https://youtube.com/playlist?list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye&si=4pgRSQtIeOUug9Hi" target="_blank" rel="noopener" >Mundo 02</a>
+        </h1>
+        <h2>Estrutura de Controle<br>
+            Aula 012: Condições Aninhadas
+        </h2>
+        <p>Date: 19<sup>th</sup> of October 2024 Saturday 29:35</p>
+        <hr>
+    </header>
+    <dl>
+        <dt><strong>&DoubleRightArrow; YouTube 02:</strong> Condições Aninhadas</dt>
+        <dd>&check; Nessa aula, vamos aprender como criar estruturas condicionais aninhadas, usando os comandos if.. elif.. else em programas Python.</dd>
+    </dl>
+
+    <hr>
+    <h2>Aula 12: Condições Aninhadas</h2>
+    <p>Nesta fase continuaremos os estudos das condições, onde aprofundaremos os estudos pois nem tudo é verdadeiro e falso.</p>
+    <p>Nesta aula falaremos sobre as <strong>Condições Aninhadas</strong>.</p>
+    <p>Aninhar é inserir uma coisa dentro da outra, ou seja, vamos encaixandos as coisas.</p>
+    <p>Em todas as linguagem de programação, incluindo o Python, podemos inserir estruturas condicionais dentro de outras estruturas condicionais, portanto, chamamos isso de <strong>Condições Aninhadas</strong>.</p>
+
+    <hr>
+    <h2>Teoria</h2>
+    <p>Na aula 10 estudamos como sair do ponto A e chegar ao ponto B, com apenas 2 (dois) caminhos, ou seja, apenas 2 opções.</p>
+    <img src="assets/py-m02a012-01.png" alt="Aula 10: caminho com apenas 2 opções.">
+    <p>Neste exemplo, temos apenas 2 opções, ou ir para o caminho da direira ou para o caminho da esquerda.</p>
+    <p>Mas nem tudo são apenas 2 opções, pois podemos ter outros caminhos, com 3, 4 ou várias outras opções.</p>
+    <p>Apartir de agora, iremos inserir um caminho a mais, ou seja, teremos 3 (três) caminhos, portanto, não temos apenas vire para direita ou para esquerda, pois agora temos a opção de ir em frente.</p>
+    <img src="assets/py-m02a012-02.png" alt="Aula 12: caminho com 3 opções.">
+
+    <h3>Caminho: Vire para esquerda</h3>
+    <p>Se pegar o caminho para esquerda, teremos as instruções até chegar ao destino final (mesmo da Aula 10).</p>
+    <img src="assets/py-m02a012-03.png" alt="Aula 10: caminho para esquerda.">
+
+    <h3>Caminho: Vire para direita ou seguir em frente</h3>
+    <p>Na Aula 10 tínhamos somente 2 caminhos, mas agora, se não for para esquerda, temos mais 2 caminhos para seguir: <strong>direita</strong> ou <strong>em frente</strong>, portanto, dentro desta condição temos outras condições.</p>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Caminho para direita</strong></dt>
+        <dd>O caminho para direita é exatamente igual ao da aula 10, desde a saída até a chegada ao destino final.</dd>
+        <dd><img src="assets/py-m02a012-04.png" alt="Aula 10: caminho para direira."></dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Caminho em frente</strong></dt>
+        <dd>O caminho seguir em frente é uma outra possibilidade, ou seja, é o 3º caminho, portanto, siga em frente e chegue ao destino final.</dd>
+        <dd><img src="assets/py-m02a012-05.png" alt="Caminho siga em frente."></dd>
+    </dl>
+
+    <p>Devemos programar não só com a melhor hipótese, pois devemos avaliar outras possibilidades.</p>
+
+    <p>Com várias opções de caminhos, temos uma <strong>Condição Aninhada</strong>. Na estrutura acima (última figura), temos claramente uma estrutura condicional dentro de outra estrutura condicional, chamamos de <strong>aninhar</strong>.</p>
+
+    <h3>Forma de Código</h3>
+    <p>Como visto na aula 10, mostraremos esse caminho em forma de código.</p>
+
+    <p>O <strong>carro.siga()</strong> (primeiro comando) e <strong>carro.pare()</strong> (último comando) irá acontecer em todas as possibilidades.</p>
+    
+    <p>O segundo comando será <strong>se carro.esquerda()</strong> e abaixo dele todos os outros comandos para chegar ao destino final, exatamente igual ao realizado na Aula 10.</p>
+
+    <p>Agora se não for para esquerda, posso ir para direita? NÃO, pois temos uma outra bifurcação, ou seja, teremos um outro <strong>se</strong>, portanto, devemos utilizar o comando <strong>senão se carro.direita()</strong> e em seguida os mesmos comandos da Aula 10.</p>
+
+    <p>Para finalizar, devemos utilizar o caminho em frente, portanto devemos utilizar o comando <strong>senão</strong> e em seguida o comando para seguir em frente até encontrar o destino final.</p>
+
+    <img src="assets/py-m02a012-06.png" alt="Condições Aninhadas.">
+
+    <p>Observe a estrutura acima, onde podemos entender como inserir uma estrutura condicional dentro da outra.</p>
+
+    <p>Essa estrutura é possível representar em Python, na verdade é possível representar essa estrutura em várias linguagem de programação.</p>
+
+    <p>Os comandos em cinza, iremos manter, pois são exatamente iguais.</p>
+
+    <dl>
+        <dt>Comandos em Python:</dt>
+        <dd>&check; se carro.esquerda() &DoubleRightArrow; <strong>if carro.esquerda():</strong></dd>
+        <dd>&check; senão &DoubleRightArrow; <strong>else:</strong></dd>
+        <dd>&check; senão se carro.direita() &DoubleRightArrow; <strong>else if</strong> carro.direita(), mas o Python simplificou essa expressão para <strong>elif</strong> = else if, portanto, a expressão será: <strong>elif carro.direita():</strong></dd>
+    </dl>
+
+    <img src="assets/py-m02a012-07.png" alt="Condições Aninhadas.">
+
+    <p><strong>Nota:</strong> Não esqueça de acrescentar <strong class="ex1">:</strong> no final da expressão, pois caso esqueça de acrescentar, tenha certeza que seu código não irá funcionar.</p>
+
+    <h3>Estrutura Aninhada</h3>
+    <p>A estrutura aninhada é muito simples, pois sempre teremos um <strong class="ex1">if</strong>, mas nunca começaremos com <strong class="ex1">elif</strong> e nem sempre teremos um <strong class="ex1">else</strong>, portanto <strong>elif</strong> e <strong>else</strong> são opcionais. Até mesmo ao utilizar <strong>elif</strong> o <strong>else</strong> é opcional.</p>
+    <img src="assets/py-m02a012-08.png" alt="Estrutura Aninhadas.">
+
+    <h3>Estrutura Aninhada Padrão (Simplificada)</h3>
+    <p>Quando executar o comando de <strong>if carro.esquerda():</strong>, teremos o <strong class="ex1">bloco 1</strong>, quando executar <strong>elif carro.direita():</strong> teremos o <strong class="ex1">bloco 2</strong> e quando executar <strong>else:</strong> teremos o <strong class="ex1">bloco 3</strong>.</p>
+    
+    <img src="assets/py-m02a012-09.png" alt="Estrutura Aninhadas Padrão (Simplificada)">
+
+    <p>Essa é a estrutura aninhada padrão (simplificada) com apenas 3 possibilidades.</p>
+
+    <h3>Estrutura Aninhada com 4 ou mais possibilidades</h3>
+    <p>Quando tiver uma estrutura com 4 ou mais possibilidades, devemos acrecentar um <strong class="ex1">elif</strong> para criar outro bloco.</p>
+    <img src="assets/py-m02a012-10.png" alt="Estrutura Aninhada com 4 ou mais possibilidades">
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Importante</strong></dt>
+        <dd>&check; Podemos utilizar dentro de um <strong>if</strong> quantos <strong>elif</strong> desejarmos e o <strong>else</strong> somente uma ou nenhuma vez.</dd>
+
+        <dd>&check; Podemos ter um <strong>if</strong> sem <strong>else</strong> e com vários <strong>elif</strong>.</dd>
+
+        <dd>&check; Podemos ter um <strong>if</strong> com vários <strong>elif</strong> e apenas um <strong>else</strong>.</dd>
+
+        <dd>&check; Mas nunca podemo utilizar <strong>elif</strong> sem <strong>if</strong>.</dd>
+    </dl>
+
+    <hr>
+    <h2>Prática</h2>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Condição Simples</strong></dt>
+        <dd>Utiliza somente <strong class="ex1">if</strong>.</dd>
+        <dd>
+            <pre>
+                <code>
+    <mark>if nome == 'Marlei':</mark>
+        print('Você é muito inteligente!!!')
+    print('Tenha um bom dia, {}!!!'.format(nome))
+                </code>
+            </pre>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Condição Composta</strong></dt>
+        <dd>Utiliza <strong class="ex1">if</strong> e <strong class="ex1">else</strong>.</dd>
+        <dd>
+            <pre>
+                <code>
+    if nome == 'Marlei':
+        print('Você é muito inteligente!!!!')
+    <mark>else:</mark>
+        print('Seu nome é tão normal.')
+    print('Tenha um bom dia, {}!!!'.format(nome))
+                </code>
+            </pre>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Condição Aninhada com 3 opções</strong></dt>
+        <dd>Utiliza <strong class="ex1">if</strong>, <strong class="ex1">elif</strong> e <strong class="ex1">else</strong>.</dd>
+        <dd>
+            <pre>
+                <code>
+    if nome == 'Marlei':
+        print('Você é muito inteligente!!!!')
+    <mark>elif nome == 'Maria' or nome == 'Pedro' or nome == 'José':</mark>
+        print('O nome {} é bem popular no Brasil!!!'.format(nome))
+    else:
+        print('Seu nome é tão normal.')
+    print('Tenha um bom dia, {}!!!'.format(nome))
+                </code>
+            </pre>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Condição Aninhada com 4 ou mais opções</strong></dt>
+        <dd>Utiliza <strong class="ex1">if</strong>, <strong class="ex1">elif</strong> (2x) e <strong class="ex1">else</strong>.</dd>
+        <dd>
+            <pre>
+                <code>
+    if nome == 'Marlei':
+        print('Você é muito inteligente!!!!')
+    elif nome == 'Maria' or nome == 'Pedro' or nome == 'José':
+        print('O nome {} é bem popular no Brasil!!!'.format(nome))
+    <mark>elif nome in 'Ana Juliana Letícia':</mark>
+        print('Belo nome vc tem {}!!!'.format(nome))
+    else:
+        print('Seu nome é tão normal.')
+    print('Tenha um bom dia, {}!!!'.format(nome))
+                </code>
+            </pre>
+        </dd>
+    </dl>
+
+    <p>Atentar que o <strong class="ex1">else</strong> é opcional.</p>
+    
+    <hr>
+    <h2>Desafios</h2>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 036:</strong> Aprovando Empréstimo</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 11:48</dd>
+        <dd>Escreva um programa para aprovar um empréstimo bancário para a compra de uma casa. O programa vai perguntar o <strong>valor da casa</strong>, o <strong>salário</strong> do comprador e em <strong>quantos ano</strong>s pretende pagar.</dd>
+        <dd>&check; Calcule o valor da prestação mensal, sabendo que ela não pode exceder <strong>30%</strong> do salário ou então o empréstimo será negado. Considerar que não há juros.</dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 037:</strong> Conversor de Bases Numéricas</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 11:14</dd>
+        <dd>Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a <strong>base de conversão</strong>:</dd>
+        <dd>&check; Para binário;</dd>
+        <dd>&check; Para octal;</dd>
+        <dd>&check; Para hexadecimal.</dd>
+        <dd>Dica: Ver aula de Bases Numéricas!</dd>
+        <dt><strong>Aula</strong></dt>
+        <dd>O Python tem conversores automáticos em sua biblioteca, e.g. <strong>Bases Numéricas</strong>:
+            <ul>
+                <li>bin para Base Binária: <strong>b = bin(n)</strong></li>
+                <li>oct para Base Octal: <strong>b = oct(n)</strong></li>
+                <li>hex para Base Hexadecimal: <strong>b = hex(n)</strong></li>
+            </ul>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 038:</strong> Comparando Números</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 06:41</dd>
+        <dd>Escreva um programa que leia <strong>dois números</strong> inteiros e compare-os mostrando na tela uma mensagem:</dd>
+        <dd>&check; O <strong>primeiro valor</strong> é <strong>maior</strong></dd>
+        <dd>&check; O <strong>segundo valor</strong> é <strong>maior</strong></dd>
+        <dd>&check; <strong>Não existe</strong> valor maior, os dois são <strong>iguais</strong></dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 039:</strong> Alistamento Militar</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 12:55</dd>
+        <dd>Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com sua idade:</dd>
+        <dd>&check; Se ele <strong>ainda vai se alistar</strong> ao serviço militar;</dd>
+        <dd>&check; Se é a <strong>hora de se alistar</strong>;</dd>
+        <dd>&check; Se já <strong>passou do tempo</strong> do alistamento.</dd>
+        <dd>Seu programa também deverá mostrar o tempo que falta ou se passou do prazo.</dd>
+        <dt><strong>&DoubleRightArrow; Exercício Extra</strong></dt>
+        <dd>Inclua no programa, se for mulher não necessita realizar o alistamento militar.</dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 040:</strong> Clássico da Média do Aluno</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 09:48</dd>
+        <dd>Crie um programa que leia duas notas de um aluno e calcule sua média, mostrando uma mensagem no final, de acordo com a média atingida:</dd>
+        <dd>&check; Média abaixo de <strong>5,0</strong>: <strong>REPROVADO</strong></dd>
+        <dd>&check; Média entre de <strong>5,0</strong> e <strong>6,9</strong>: <strong>RECUPERAÇÃO</strong></dd>
+        <dd>&check; Média <strong>7,0</strong> ou superior: <strong>APROVADO</strong></dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 041:</strong> Classificando Atletas</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 06:12</dd>
+        <dd>A Confederação Nacional de Natação precisa de um programa que leia o ano de nascimento de um atleta e mostre sua categoria de acordo com a idade.</dd>
+        <dd>&check; Até <strong>9 anos</strong>: <strong>MIRIM</strong>;</dd>
+        <dd>&check; Até <strong>14 anos</strong>: <strong>INFANTIL</strong>;</dd>
+        <dd>&check; Até <strong>19 anos</strong>: <strong>JUNIOR</strong>;</dd>
+        <dd>&check; Até <strong>20 anos</strong>: <strong>SÊNIOR</strong>;</dd>
+        <dd>&check; Acima: <strong>MASTER</strong>.</dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 042:</strong> Analisando Triângulo v2.0</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 13:51</dd>
+        <dd>Refaça o <strong>Exercício 035</strong> dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado.</dd>
+        <dd>&check; <strong>Equilátero</strong>: todos os lados iguais;</dd>
+        <dd>&check; <strong>Isósceles</strong>: dois lados iguais;</dd>
+        <dd>&check; <strong>Escaleno</strong>: todos os lados diferentes.</dd>
+        <dt><strong>&rightarrow; Comandos:</strong></dt>
+        <dd><strong class="ex1">end=''</strong> no final de um print, junta com a linha inferior.</dd>
+        <dd><img src="assets/py-m02a012-11.png" alt="Comando end=''"></dd>
+        <dd><img src="assets/py-m02a012-12.png" alt="Comando end=''"></dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 043:</strong> Índice de Massa Corporal</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 13:31</dd>
+        <dd>Desenvolva uma lógica que leia o peso e altura de uma pessoa, calcule seu <strong>IMC</strong> e mostre seu status, de acordo com a tabela abaixo.</dd>
+        <dd>&check; Abaixo de <strong>18,5</strong>: Abaixo do Peso;</dd>
+        <dd>&check; Entre <strong>18,5</strong> e <strong>25</strong>: Peso ideal;</dd>
+        <dd>&check; <strong>25</strong> até <strong>30</strong>: Sobrepeso;</dd>
+        <dd>&check; <strong>30</strong> até <strong>40</strong>: Obesidade;</dd>
+        <dd>&check; Acima de <strong>40</strong>: Obesidade mórbida (grave)</dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 044:</strong> Gerenciador de Pagamentos</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 15:23</dd>
+        <dd>Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu <strong>preço normal</strong> e <strong>condição de pagamento</strong>.</dd>
+        <dd>&check; À vista <strong>cash/pix</strong>: <strong>10%</strong> de desconto;</dd>
+        <dd>&check; À vista <strong>cartão</strong>: <strong>5%</strong> de desconto;</dd>
+        <dd>&check; Em até <strong>2x no cartão</strong>: Preço normal;</dd>
+        <dd>&check; <strong>3x ou mais</strong> no cartão: <strong>20%</strong> de juros.</dd>
+        <dt><strong>&rightarrow; Comandos:</strong></dt>
+        <dd>Antigo: print('\n{:=^50}'.format(' Exercício 044 '))</dd>
+        <dd>Versão 2020: print(f'{" Exercício 044 ":=^50}')</dd>
+        <dd>===== Exercício 044 =====</dd>
+    </dl>
+
+    <dl>
+        <dt><strong>&DoubleRightArrow; Exercício 045:</strong> GAME: Pedra Papel e Tesoura</dt>
+        <dd>&rightarrow; 26/Oct/2024 Saturday 16:47</dd>
+        <dd>Crie um programa que faça o computador jogar Jokenpô com você.</dd>
+        <dd>&check; Pedra: <strong>Ganha</strong> da tesoura e <strong>perde</strong> do papel;</dd>
+        <dd>&check; Papel: <strong>Ganha</strong> da pedra e <strong>perde</strong> da tesoura;</dd>
+        <dd>&check; Tesoura: <strong>Ganha</strong> do papel e <strong>perde</strong> da pedra;</dd>
+        <dt><strong>&rightarrow; Comandos:</strong> Bibliotecas utilizadas</dt>
+        <dd>import random ou from random import choice</dd>
+        <dd>import time ou from time import sleep</dd>
+        <dd><mark><strong>REVER AULA DO GG. modo diferente!</strong></mark></dd>
+    </dl>
+   
+    <hr>
+    <h2>The End!</h2>
+</body>
+</html>

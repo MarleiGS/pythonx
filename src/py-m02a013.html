@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M02A013: Estrutura de Repetição for</title>
+    <link rel="stylesheet" href="css-general.css">
+    <style>
+        .img250h {
+            height: 250px;
+        }
+
+        section {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python 3 |
+            <a href="https://youtube.com/playlist?list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye&si=4pgRSQtIeOUug9Hi" target="_blank" rel="noopener" >Mundo 02</a>
+        </h1>
+        <h2>Estrutura de Controle<br>
+            Aula 013: Estrutura de Repetição for
+        </h2>
+        <p>Date: 01<sup>st</sup> of April 2025 Tuesday 35:25</p>
+        <hr>
+    </header>
+    <dl>
+        <dt><strong>&DoubleRightArrow; YouTube 13:</strong> Estrutura de repetição for</dt>
+        <dd>&check; Nessa aula, vamos começar nossos estudos com os laços e vamos fazer primeiro o "for", que é uma estrutura versátil e simples de entender. Por exemplo:
+            <pre> <!--VERIFICAR ESSA ESTRUTURA-->
+                <code>
+                    for c in range(0, 4):
+                         print(c)
+                    print('Acabou')
+                </code>
+            </pre>
+        </dd>
+        <dd>
+            <pre> <!--VERIFICAR ESSA ESTRUTURA-->
+                <code>
+                    for c in range(0, 4):
+                         print(c)
+                    print('Acabou')
+                </code>
+            </pre>
+        </dd>
+    </dl>
+
+    <pre> <!--VERIFICAR ESSA ESTRUTURA-->
+        <code>
+            for c in range(0, 4):
+                 print(c)
+            print('Acabou')
+        </code>
+    </pre>
+
+    <hr>
+    <h2>Fase 13: Laços de Repetição (Parte 1)</h2>
+    <p>Até esta aula aprendemos a desviar dos obstáculos! Nesta aula aprenderemos a repetir nossas ações (rotinas).</p>
+
+    <p>Nesta aula aprenderemos uma nova categoria de estrutura de controle que são os laços/repetições ou iterações.</p>
+
+    <p>CUIDADO! NÃO É INTERAÇÃO.... É ITERAÇÃO.</p>
+
+    <p>Nesta aula iniciaremos os estudos sobre laços e esta é a primeira aula sobre laço, pois teremos mais aulas relacionadas aos laços para entendermos melhor todas as possibilidades e técnicas de trabalharmos com iterações (repetições) dentro de uma linguagem de programação.</p>
+
+    <p>Iniciaremos com a estrutura de repetição <strong>FOR</strong>!</p><hr>
+
+
+    <h2>Teoria 02:45</h2>
+    <h3>Situação 1</h3>
+    <p>Nesta 1ª situação, criaremos uma plataforma com 6 blocos de chão.</p>
+
+    <p>colocaremos uma maça no último bloco e um personagem no primeiro bloco.</p>
+    <p>Agora o personagem deve ir até a maçã e para isso, devemos criar um passo a passo para que isso ocorra.</p>
+    <img class="img300" src="assets/py-02a013-01.jpg" alt="comando passo ">
+    <p>Para que o personagem chegue até a maçã, devemos dar 5 passos e ao final do 5º passo, podemos pegar a maçã.</p>
+
+    <img class="img300" src="assets/py-02a013-02.jpg" alt="comando passo ">
+
+    <p>Este comando é muito simples, pois boa parte do programa se repete!</p>
+
+    <p>Podemos ampliar nossa plataforma para 11 blocos de chão</p>
+
+    <img class="img300" src="assets/py-02a013-03.jpg" alt="comando passo ">
+    <p>Neste caso, repetiremos o comando passo por 10 vezes até o personagem pegar a maçã. </p>
+    <p>Mas se forem 500 blocos (499 passos)? E se forem 10.001 blocos (10.000 passos)? Teremos que escrever o comando passo 10.000 vezes até o personagem pegar a maçã.</p>
+
+    <p>Para não repetirmos o comando passo 10.000 vezes, temos um comando para economizar essa etapa.</p>
+
+    <p>Esse comando tem em toda linguagem de programação e é chamada de <strong>Estrutura de Laço</strong>.</p>
+
+    <h3>Estrutura de Laço</h3>
+    <p>No nosso comando iremos criar um laço representado por um círculo com duas setas internas circulares e uma estrutura saindo e voltando para este círculo.</p>
+    <img src="assets/py-02a013-03a.jpg" alt="comando passo ">
+    <p>Todos os comandos que inserir dentro do laço (marcado em amarelo) irá ser repetido eternamente.</p>
+    <img src="assets/py-02a013-03b.jpg" alt="comando passo ">
+    <p>Se inserir o comando passo neste laço, nosso personagem irá andar até cair da plataforma, ou seja, ele não irá pegar a maçã, pois o comando é somente para dar um passo.</p>
+    <img class="img400" src="assets/py-02a013-04.jpg" alt="comando passo ">
+
+    <p>Para que isso não ocorra, devemos inserir um limite ao lado do circulo verde. Para definirmos esse limite, devemos numerar cada bloco da nossa plataforma iniciando em 0.</p>
+    <img class="img400" src="assets/py-02a013-05.jpg" alt="comando passo ">
+    <p>Agora, nosso personagem deve andar do bloco 1 até o bloco onde está a maçã, ou seja, bloco 10. Portanto, nosso limite será de 1 a 10, conforme marcação em amarelo.</p>
+    <p>Nosso personagem irá andar até o bloco 10, pois cada passo nosso será contado, ou seja, o contador irá contar do passo 1 ao passo 10.</p>
+    <p>Quando nosso personagem chegar no passo 10, ele irá parar e sair do comando passo. Ao sair do comando passo, podemos executar qualquer outro comando, mas o comando que executaremos é de pegar a mação.</p>
+    <img class="img400" src="assets/py-02a013-06.jpg" alt="comando passo ">
+    <p>Essa estrutura é chamada de <strong>laço de repetição</strong> ou <strong>iteração</strong>, mas esse laço em específico, chamamos de <strong>laço de variável de controle</strong>.</p>
+
+    <p>Escrever em portugues</p>
+    <img class="img400" src="assets/py-02a013-07.jpg" alt="comando passo ">
+    <p>Onde c é a variável de controle e podemos dar qualquer nome para uma variável.</p>
+    <p>Interno ao laço, temos apenas um comando, ou seja, comando passo. Após atingir o limite de passo o personagem sairá desse laço e executará o comando pegar a maçã.</p>
+    <p>Observe que o comando pegar a maçã está fora do laço.</p>
+
+    <h3>Escrever em Python</h3>
+    <img class="img400" src="assets/py-02a013-08.jpg" alt="comando passo ">
+    <p>Atentar para não esquecer ":" (dois pontos).</p>
+    
+    <h3>Situação 2 09:10</h3>
+    <p>Na Situação 2 teremos uma plataforma com alguns blocos faltando.</p>
+
+    <img class="img400" src="assets/py-02a013-09.jpg" alt="comando passo ">
+    <p>Nesta situação o comando Passo não deverá ser aplicado, pois ao chegar em um bloco faltante, o personagem cairá da plataforma, portanto, devemos inserir um novo comando: <strong>Pula</strong>.</p>
+    <p>O personagem deverá executar o comando <strong>Passo</strong> e <strong>Pula</strong> e repetirá esse comando até encontrar a maçã. Ao encontrar a maçã o comando <strong>Pega</strong> será executado.</p>
+    <img class="img400" src="assets/py-02a013-10.jpg" alt="comando passo ">
+
+    <p>Ao analisar a ação acima, podemos observar que o comando <strong>Passo</strong> e <strong>Pula</strong> foi repetida 3 vezes até encontrar a maçã.</p>
+    <img class="img250h" src="assets/py-02a013-11.jpg" alt="comando passo ">
+
+    <p>Portanto, podemos substituir essa ocorrência de repetição de comandos por um laço com o comando <strong>Passo</strong> e <strong>Pula</strong>.</p>
+    <img class="img250h" src="assets/py-02a013-11a.jpg" alt="comando passo">
+  
+    <p>Se deixar o laço como está, ele vai executar o comando infinitamente! Mas não queremos que isso aconteça, pois o laço deve executar esse comando por 3 vezes.</p>
+
+    <p>Portanto, devemos inserir um painel ao lado do laço que limite a execução do comando em 3 vezes.</p>
+    <img class="img250h" src="assets/py-02a013-11b.jpg" alt="comando passo">
+
+    <p>Com essa configuração, ao iniciar a execução do programa, o comando <strong>Passo</strong> e <strong>Pula</strong> será executado por 3 vezes e ao terminar esse comando, o programa sairá do laço e executará o comando <strong>Passo</strong> e <strong>Pega</strong>.</p>
+    <img class="img300" src="assets/py-02a013-13.jpg" alt="comando passo ">
+    <p>Nesta situação, o programa é quase do mesmo tamanho, mas imagina se tiver que executar o comando <strong>Passo</strong> e <strong>Pega</strong> por 2.000 vezes!😬</p>
+    <p>No primeiro programa teremos que escrever o comando 2.000 vezes, entretanto, no programa com laço de repetição, basta trocar 3 por 2.000!😜</p>
+
+    <h3>Escrever em português</h3>
+    <img class="img300" src="assets/py-02a013-14.jpg" alt="comando passo ">
+
+    <h3>Escrever em Python</h3>
+    <img class="img300" src="assets/py-02a013-15.jpg" alt="comando passo ">
+
+    <h3>Situação 3 13:40</h3>
+    <p>Na Situação 3 teremos uma plataforma com alguns blocos faltando, agora teremos 2 moedas no caminho. Portanto, agora teremos os comandos:
+        <ol>
+            <li>Passo;</li>
+            <li>Pula;</li>
+            <li>Pega Moeda;</li>
+            <li>Pega Maçã.</li>
+        </ol>
+    </p>
+    <img class="img300" src="assets/py-02a013-16.jpg" alt="comando passo ">
+    <p>Observe que o padrão foi alterado, pois iniciamos a execução do programa:
+        <ul type="none">
+            <li>1º Passo e Pula</li>
+            <li>2º Pega Moeda, Passo e Pula</li>
+            <li>3º Passo e Pula</li>
+            <li>4º Pega Moeda, Passo e Pega Maçã</li>
+            <li>&Gt; Fim da execução do programa.</li>
+        </ul>
+    </p>
+    <img class="img300" src="assets/py-02a013-18.jpg" alt="comando passo ">
+    <p>O programa terá uma condição para pegar a moeda dentro do laço e dentro do "se/if", ou seja, temos uma estrutura (se/if) dentro de outra estrutura (for) e isso é chamado de <strong class="fvariant">Aninhar</strong>.</p>
+    <p>Podemos sempre juntar uma estrutura na outra, ou seja, um se/if dentro de um for, um for dentro de um if/se, um if/se dentro de outro if/se, basta conhecermos as estruturas!</p>
+
+    <h3>Escrever: Português e Python</h3>
+    <img class="img300" src="assets/py-02a013-19.jpg" alt="comando passo">
+    <hr>
+
+    <h2>Prática 17:20</h2>
+
+    <h3>Exemplo 1</h3>
+    <p>Escreva Olá Mundo! 4 vezes.</p>
+    <p>A. Config.: Antiga
+        <pre>
+            <code>
+                print('Olá Mundo!')
+                print('Olá Mundo!')
+                print('Olá Mundo!')
+                print('Olá Mundo!\n')
+            </code>
+        </pre>
+    </p>
+
+
+
+    <p>B. Config: Laços de repetição <br>
+        B1. Range 1 a 4:
+        <pre>
+            <code>
+                for c in range(1, 4):
+                    print('Olá Mundo!')
+                print('FIM!')
+            </code>
+        </pre>
+        B2. Range 0 a 4:
+        <pre>
+            <code>
+                for c in range(0, 4):
+                    print('Olá Mundo!')
+                print('FIM!')
+            </code>
+        </pre>
+    </p>
+
+    <img class="img300" src="assets/py-02a013-20.jpg" alt="comando passo">
+    <p>REALIZAR DESCRIÇÃO</p>
+
+    <h3>Exemplo 2</h3>
+    <img class="img300" src="assets/py-02a013-21a.jpg" alt="comando passo">
+    <img src="assets/py-02a013-21b.jpg" alt="comando passo">
+
+    <p>REALIZAR DESCRIÇÃO</p>
+
+    <h3>Exemplo 3: Contagem Regressiva</h3>
+    <img class="img300" src="assets/py-02a013-22a.jpg" alt="comando passo">
+    <img src="assets/py-02a013-22b.jpg" alt="comando passo">
+
+    <p>REALIZAR DESCRIÇÃO</p>
+
+    <h3>Exemplo 4: Contagem com Passo (step)</h3>
+    <img class="img300" src="assets/py-02a013-23a.jpg" alt="comando passo">
+    <img src="assets/py-02a013-23b.jpg" alt="comando passo">
+
+    <p>REALIZAR DESCRIÇÃO / REVER CODIGOS</p>
+
+    <h3>Exemplo 5: Criar variável</h3>
+    <img class="img300" src="assets/py-02a013-24a.jpg" alt="comando passo">
+    <img src="assets/py-02a013-24b.jpg" alt="comando passo">
+
+    <p>REALIZAR DESCRIÇÃO</p>
+
+    <h3>Exemplo 6: Criar Início, Fim e Passo (step)</h3>
+    <img class="img300" src="assets/py-02a013-a.jpg" alt="comando passo">
+    <img src="assets/py-02a013-.jpg" alt="comando passo">
+
+    <p>REALIZAR DESCRIÇÃO</p>
+    
+    <h3>Exemplo 7: Digitar Valor no Laço</h3>
+    <img class="img300" src="assets/py-02a013-a.jpg" alt="comando passo">
+    <img src="assets/py-02a013-.jpg" alt="comando passo">
+
+    <p>REALIZAR DESCRIÇÃO</p>
+
+
+
+
+
+
+
+
+
+    <hr>
+    <h2>Desafios 26:20</h2>
+    <h3>Exercício 046</h3>
+    <p>Faça um programa que mostre na tela uma <strong>contagem regressiva</strong> para o estouro de fogos de artifícios, indo de <strong>10 até 0</strong>, com uma pausa de <strong>1 segundo</strong> entre eles.</p>
+
+    <h3>Exercício 047</h3>
+    <p>Crie um programa que mostre na tela <strong>todos os números pares</strong> que estão no intervalo entre <strong>1</strong> e <strong>50</strong>.</p>
+
+    <h3>Exercício 048</h3>
+    <p>Faça um programa que calcule a <strong>soma</strong> entre todos os <strong>números ímpares</strong> que são <strong>múltiplos de três</strong> e que se encontram no intervalo de <strong>1</strong> até <strong>500</strong>.</p>
+
+    <h3>Exercício 049</h3>
+    <p>Refaça o <strong>Desafio 009</strong>, mostrando a <strong>tabuada</strong> de um número que o usuário escolher, só que agora utilizando um <strong>laço for</strong>.</p>
+
+    <h3>Exercício 050</h3>
+    Desenvolva um programa que leia <strong>seis números inteiros</strong> e mostre a soma apenas daqueles que forem <strong>pares</strong>. Se o valor digitado for <strong>ímpar</strong>, desconsidere-o.
+
+    <h3>Exercício 051</h3>
+    <p>Desenvolva um programa que leia o <strong>primeiro termo</strong> e a <strong>razão</strong> de uma <strong>PA</strong> (Progressão Aritmética). No final, mostre os <strong>10</strong> primeiros termos dessa progressão.</p>
+
+    <h3>Exercício 052</h3>
+    <p>Faça um programa que leia um <strong>número inteiro</strong> e diga se ele é ou não um <strong>número primo</strong>.</p>
+
+    <h3>Exercício 053</h3>
+    <p>Crie um programa que leia uma <strong>frase</strong> qualquer e diga se ela é um <strong>palíndromo</strong>. Desconsidere os espaços e acentos.</p>
+    <dl>
+        <dt>Exemplos:</dt>
+        <dd>&check; Apos a sopa</dd>
+        <dd>&check; A sacada da casa</dd>
+        <dd>&check; A torre da derrota</dd>
+        <dd>&check; O lobo ama o bolo</dd>
+        <dd>&check; Anotaram a dada da maratona</dd>
+
+    </dl>
+
+    <p>
+        Aqui estão 10 frases palíndromas em português:
+
+1.  Socorram-me subi no ônibus em Marrocos.
+2.  A mala nada na lama.
+3.  A grama é amarga.
+4.  A torre da derrota.
+5.  O romano acata amores a damas amadas e Roma ataca o namoro.
+6.  A base do teto desaba.
+7.  A diva em Argel alegra-me a vida.
+8.  A cara rajada da jararaca.
+9.  A sacada da casa.
+10. Olé! Maracujá, caju, caramelo!
+
+    </p>
+
+    <h3>Exercício 054</h3>
+    <p>Crie um programa que leia o <strong>ano de nascimento</strong> de <strong>sete pessoas</strong>. No final, mostre quantas pessoas ainda não atingiram a maioridade e quantas já são maiores.</p>
+
+    <h3>Exercício 055</h3>
+    <p>Faça um programa que leia o <strong>peso</strong> de <strong>cinco pessoas</strong>. No final, mostre qual foi o <strong>maior</strong> e o <strong>menor</strong> peso lidos.</p>
+
+    <h3>Exercício 056</h3>
+    <p>Desenvolva um programa que leia o <strong>nome</strong>, <strong>idade</strong> e <strong>sexo</strong> de <strong>4 pessoas</strong>.</p>
+    <dl>
+        <dt>No final do programa, mostre:</dt>
+        <dd>&check; A <strong>média de idade</strong> do grupo.</dd>
+        <dd>&check; Qual é o nome do homem <strong>mais velho</strong>.</dd>
+        <dd>&check; Quantas mulheres têm <strong>menos de 20 anos</strong>.</dd>
+    </dl>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+   
+    <hr>
+    <h2>The End!</h2>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://marleigs.github.io/MarleiGS/" target="_blank" rel="noopener">MarleiGS</a><sup>&copy;</sup></p>
+    </footer>
+</body>
+</html>
