@@ -1,0 +1,142 @@
+@charset "UTF8";
+
+@font-face { /*Fonte 01*/
+    font-family: 'Halo';
+    src: url(font_Halo.ttf) format('truetype');
+    
+}
+
+:root {
+    --font01: 'Halo', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    
+}
+
+.font {
+    font-family: var(--font01);
+    font-weight: normal;
+    
+}
+
+header {
+    background-color: #353535;    
+    padding: 10px 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    border: 1px solid red;
+}
+
+header span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px dashed blue; /*APAGAR qdo pronto*/
+}
+
+header h1 {
+    color: whitesmoke;
+    padding-right: 15px;
+
+    border: 1px dashed yellow; /*APAGAR qdo pronto*/
+}
+
+header > nav {
+    border: 1px dashed white; /*APAGAR qdo pronto*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+header a {
+    color: whitesmoke;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 3px 5px;
+    border-radius: 8px;
+    
+    border: 1px dotted red; /*APAGAR qdo pronto*/
+}
+
+header a:hover {
+    background-color: whitesmoke;
+    color: #353535;
+}
+
+#button1 {
+    background-color: #F25A70;
+    box-shadow: 5px 5px 0px black;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+
+    transition: transform 250ms linear, opacity 500ms ease-in-out;
+}
+
+#button1:hover {
+    font-weight: 500;
+    transform: scale(1.08);
+    opacity: 0.7;
+}
+
+main {
+    background-color: whitesmoke;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section {
+    background-color: whitesmoke;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.300);
+}
+
+main > section > h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+}
+
+main > section > h2 {
+    font-size: 1.3rem;
+}
+
+main > section > img {
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #353535;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 30px;
+    padding: 15px 0;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
